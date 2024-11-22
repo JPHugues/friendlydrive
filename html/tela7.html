@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela 7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/tela7styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="tela5.html">
+            <img alt="Ícone para voltar" src="img/voltar.png">
+        </a>
+        <img alt="Ícone de um carro" src="img/carro.png">
+        <img alt="Ícone do perfil do usuário" src="img/perfil.png">
+    </header>
+
+    <main>
+        <section class="caixaendereco">
+            <h2>Endereços</h2>
+            <div class="endereco">
+                <img alt="Ícone de localização azul" src="img/localizacaoazul.png">
+                <input placeholder="Endereço de saída.">
+            </div>
+            <div class="endereco">
+                <img alt="Ícone de localização azul" src="img/localizacaoazul.png">
+                <input placeholder="Endereço de chegada.">
+            </div>
+            <div class="botoes">
+                <img alt="Ícone para adicionar mais informações" src="img/mais.png">
+                <a href="tela8.html">
+                    <img alt="Ícone de confirmação" src="img/ok.png">
+                </a>
+            </div>
+        </section>
+
+        <section class="atividade">
+            <h2>Histórico de Atividades</h2>
+            <div class="tituloatividade">
+                <img alt="Ícone de histórico" src="img/historico.png">
+                <h3>Atividades Recentes</h3>
+            </div>
+
+            <ul class="listaatividades">
+                <li class="atividadeitem">
+                    <img alt="Ícone de carro de frente" src="img/carrofrente.png">
+                    <div>
+                        <p>Rua Iaranjais 333</p>
+                        <p>24/07 - Junior Alonso</p>
+                    </div>
+                </li>
+
+                <li class="atividadeitem">
+                    <img alt="Ícone de carro de frente" src="img/carrofrente.png">
+                    <div>
+                        <p>Rua Paulo Faccini 187</p>
+                        <p>16/06 - Sergio Ramos</p>
+                    </div>
+                </li>
+
+                <li class="atividadeitem">
+                    <img alt="Ícone de carro de frente" src="img/carrofrente.png">
+                    <div>
+                        <p>Rua Josephina Nazareth</p>
+                        <p>02/06 - Luan Perez</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <section class="validacaoDemanda">
+        <h2>Validação de Demanda</h2>
+        <div class="validacao">
+            <label for="totalPassageiros">Passageiros Solicitados:</label>
+            <input type="number" id="totalPassageiros" min="1" placeholder="Número de passageiros">
+            <button id="validarDemanda">Validar Demanda</button>
+        </div>
+    </section>
+
+    <section class="resultadoDemanda">
+        <h2>Resultado</h2>
+        <p id="resultado"></p>
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
