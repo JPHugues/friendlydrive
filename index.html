@@ -5,31 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela 1</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="css/tela1styles.css">
 </head>
 
 <body>
 
     <header class="header">
-            <a href="tela2.html">
-                <img src="img/menu.png" alt="Menu">
-            </a>
-            <img src="img/carro.png" alt="Carro">
-            <img src="img/perfil.png" alt="Perfil">
+        <a href="tela2.html">
+            <img src="img/menu.png" alt="Ícone de menu">
+        </a>
+        <img src="img/carro.png" alt="Ícone de carro">
+        <img src="img/perfil.png" alt="Ícone de perfil">
     </header>
     
 
     <main>
         <section>
-            <h1 class="titulo">Rush Time</h1>
-            <h2 class="subtitulo">Pessoas por perto de você:</h2>
+            <h1>Rush Time</h1>
+            <h2>Pessoas por perto de você:</h2>
 
             <ul class="lista">
                 <li>
                     <a href="tela3v2.html">
                         <article class="pessoas">
-                            <img src="img/perfil.png" alt="Perfil de Lucca">
+                            <h3>Perfil de Lucca</h3>
+                            <img src="img/perfil.png" alt="Imagem do perfil de Lucca">
                             <div>
                                 <p>Nome: Lucca</p>
                                 <p>Destino: Vila Olimpia</p>
@@ -42,30 +42,32 @@
 
                 <li>
                     <a href="tela3.html">
-                    <article class="pessoas">
-                        <img src="img/perfil.png" alt="Perfil de Enzo Fernandez">
-                        <div>
-                            <p>Nome: Enzo Fernandez</p>
-                            <p>Destino: Alphaville</p>
-                            <p>Demanda: Carona</p>
-                            <p>Horário para sair: 17:00-19:00</p>
-                        </div>
-                    </article>
-                </a>
+                        <article class="pessoas">
+                            <h3>Perfil de Enzo Fernandez</h3>
+                            <img src="img/perfil.png" alt="Imagem do perfil de Enzo Fernandez">
+                            <div>
+                                <p>Nome: Enzo Fernandez</p>
+                                <p>Destino: Alphaville</p>
+                                <p>Demanda: Carona</p>
+                                <p>Horário para sair: 17:00</p>
+                            </div>
+                        </article>
+                    </a>
                 </li>
 
                 <li>
                     <a href="tela5.html">
-                    <article class="pessoas">
-                        <img src="img/perfil.png" alt="Perfil de Mario Barotelli">
-                        <div>
-                            <p>Nome: Mario Barotelli</p>
-                            <p>Destino: Guarulhos</p>
-                            <p>Serviço: Motorista</p>
-                            <p>Horário disponível: 11:00-13:00</p>
-                        </div>
-                    </article>
-                </a>
+                        <article class="pessoas">
+                            <h3>Perfil de Mario Barotelli</h3>
+                            <img src="img/perfil.png" alt="Imagem do perfil de Mario Barotelli">
+                            <div>
+                                <p>Nome: Mario Barotelli</p>
+                                <p>Destino: Guarulhos</p>
+                                <p>Serviço: Motorista</p>
+                                <p>Horário disponível: 11:00-13:00</p>
+                            </div>
+                        </article>
+                    </a>
                 </li>
             </ul>
         </section>
@@ -74,6 +76,19 @@
     <footer class="rodape">
         <p>Mais pessoas</p>
     </footer>
+    <div>
+        <label for="enderecoOrigem">Origem:</label>
+        <input type="text" id="enderecoOrigem" placeholder="Digite sua origem">
+    </div>
+    <div>
+        <label for="enderecoDestino">Destino:</label>
+        <input type="text" id="enderecoDestino" placeholder="Digite seu destino">
+    </div>
+    <div>
+        <button id="solicitarCarona">Solicitar Carona</button>
+    </div>
+    <div id="resultadoCarona"></div>
+    
     <script src="script.js"></script>
 </body>
 </html>
