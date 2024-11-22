@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f1f1;
+}
+
+.header {
+    background-color: #cecdcd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+}
+.header img {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 0.1rem solid #000;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.perfilimgs {
+    width: 5rem;
+    height: 5rem;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.opcoes p {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.opcoes img {
+    width: 2rem;
+    margin-right: 0.2rem;
+}
+
+.mapa {
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+.mapa p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.mapa-img {
+    max-width: 18rem;
+}
+
+.rodape {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
+@media (max-width: 768px) {
+    .perfilimgs {
+        width: 4rem;
+        height: 4rem;
+    }
+    .opcoes img {
+        width: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .opcoes p {
+        font-size: 1rem;
+    }
+}

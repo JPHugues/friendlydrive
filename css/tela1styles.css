@@ -1,0 +1,159 @@
+/* 1 rem = 16px */
+/* para textos normais = sans-serif
+   para longos = serif */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: #cecdcd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+}
+.header img {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.titulo {
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #3fa3e6;
+    text-shadow: 0.0625rem 0.0625rem #000;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #000;
+    margin-bottom: 1.25rem;
+}
+
+.lista {
+    padding: 3rem 1.25rem;
+}
+
+.pessoas {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pessoas img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.rodape {
+    background-color: #d0cece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+/* usar isso pra tirar cor dos links*/
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+main {
+    flex: 1;
+}
+
+.carona-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 0.0625rem solid #ccc; 
+    border-radius: 0.5rem; 
+    padding: 0.9375rem; 
+    margin: 0.625rem 0; 
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carona-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); 
+}
+
+
+.carona-item h3 {
+    font-size: 1.125rem; 
+    color: #4CAF50;
+    margin-bottom: 0.3125rem; 
+}
+
+
+.carona-item p {
+    font-size: 1rem; 
+    color: #666;
+    margin: 0.125rem 0; 
+}
+
+
+.aceitar-carona {
+    margin-top: 0.625rem; 
+    padding: 0.625rem 1.25rem; 
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 0.3125rem; 
+    cursor: pointer;
+    font-size: 1rem; 
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.aceitar-carona:hover {
+    background-color: #ff8c00;
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2rem;
+    }
+    .subtitulo {
+        font-size: 0.7rem;
+    }
+    .pessoas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .pessoas img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.5rem;
+    }
+    .subtitulo {
+        font-size: 0.6rem;
+    }
+}

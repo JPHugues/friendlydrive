@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f1f1;
+}
+
+.header {
+    background-color: #cecdcd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+}
+.header img {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.mensagem {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.mensagem p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.perfilimg {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.input {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 10rem;
+    margin-bottom: -5rem; 
+}
+
+.icones {
+    width: 2rem;
+}
+
+.textoinput {
+    width: 60%;
+    padding: 0.4rem;
+    border-radius: 0.7rem;
+    border: 0.1rem solid #000;
+    outline: none;
+    font-size: 1rem;
+    z-index: 10;
+}
+
+.teclado {
+    text-align: center;
+    margin-top: 0rem; 
+}
+
+.teclado-img {
+    width: 90%;
+    border-radius: 0.625rem;
+}
+
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
+@media (max-width: 768px) {
+    .mensagem p {
+        font-size: 1.2rem;
+    }
+    .perfilimg {
+        width: 3rem;
+        height: 3rem;
+    }
+    .icones {
+        width: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .textoinput {
+        font-size: 0.8rem;
+    }
+}
