@@ -1,67 +1,24 @@
-const motoristas = [
-    { nome: "Mario Balotelli", localizacao: "Guarulhos", maxDistancia: 50 },
-    { nome: "Enzo Fernandez", localizacao: "São Paulo", maxDistancia: 30 },
-    { nome: "Lucca", localizacao: "Campinas", maxDistancia: 70 },
-];
-
-function calcularDistanciaSimulada(origem, destino) {
-    const distanciasSimuladas = {
-        "Guarulhos-São Paulo": 25,
-        "São Paulo-Campinas": 100,
-        "Guarulhos-Campinas": 95,
-    };
-    const chave = `${origem}-${destino}`;
-    const chaveReversa = `${destino}-${origem}`;
-    
-    return distanciasSimuladas[chave] || distanciasSimuladas[chaveReversa] || 50;
+function validarDemandaPassageiros(capacidadeTotal, totalPassageiros) {
+    if (totalPassageiros > capacidadeTotal) {
+        return `Capacidade insuficiente para ${totalPassageiros} passageiros. O motorista NÃO pode oferecer a carona.`;
+    }
+    return `Demanda validada! O motorista PODE oferecer a carona para ${totalPassageiros} passageiro(s).`;
 }
 
-function encontrarMotorista(origem, destino) {
-    const distanciaParaDestino = calcularDistanciaSimulada(origem, destino);
-    const motoristasValidos = motoristas.filter(
-        (motorista) => distanciaParaDestino <= motorista.maxDistancia
-    );
+document.addEventListener("DOMContentLoaded", () => {
+    const botaoValidar = document.getElementById("validarDemanda");
+    const campoResultado = document.getElementById("resultado");
 
-    if (motoristasValidos.length === 0) {
-        return null; 
-    }
+    botaoValidar.addEventListener("click", () => {
+        const capacidadeTotal = 4; 
+        const totalPassageiros = parseInt(document.getElementById("totalPassageiros").value, 10);
 
-    return motoristasValidos[0];
-}
+        if (isNaN(totalPassageiros) || totalPassageiros < 1) {
+            campoResultado.textContent = "Por favor, insira um número válido de passageiros.";
+            return;
+        }
 
-function solicitarCarona() {
-    const origem = document.querySelector("#enderecoOrigem").value.trim();
-    const destino = document.querySelector("#enderecoDestino").value.trim();
-    const resultadoDiv = document.querySelector("#resultadoCarona");
-
-    if (!origem || !destino) {
-        resultadoDiv.textContent = "Por favor, preencha os campos de origem e destino.";
-        resultadoDiv.style.color = "red";
-        return;
-    }
-
-    const motorista = encontrarMotorista(origem, destino);
-
-    if (!motorista) {
-        resultadoDiv.innerHTML = `
-            <p>Desculpe, nenhum motorista está disponível para sua rota.</p>
-        `;
-        resultadoDiv.style.color = "red";
-        return;
-    }
-
-    const distancia = calcularDistanciaSimulada(origem, destino);
-    resultadoDiv.innerHTML = `
-        <p>Carona solicitada com sucesso!</p>
-        <p><strong>Motorista:</strong> ${motorista.nome}</p>
-        <p><strong>Localização:</strong> ${motorista.localizacao}</p>
-        <p><strong>Distância estimada:</strong> ${distancia} km</p>
-    `;
-    resultadoDiv.style.color = "green";
-
-    document.querySelector("#enderecoOrigem").value = "";
-    document.querySelector("#enderecoDestino").value = "";
-}
-
-
-document.querySelector("#solicitarCarona").addEventListener("click", solicitarCarona);
+        const mensagem = validarDemandaPassageiros(capacidadeTotal, totalPassageiros);
+        campoResultado.textContent = mensagem;
+    });
+})

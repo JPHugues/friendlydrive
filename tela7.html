@@ -71,19 +71,20 @@
             </ul>
         </section>
     </main>
-
-    <section>
-        <h2>Solicitar Carona</h2>
-        <label for="enderecoOrigem">Origem:</label>
-        <input id="enderecoOrigem" type="text" placeholder="Digite o endereço de origem">
-    
-        <label for="enderecoDestino">Destino:</label>
-        <input id="enderecoDestino" type="text" placeholder="Digite o endereço de destino">
-    
-        <button id="solicitarCarona">Solicitar Carona</button>
-    
-        <div id="resultadoCarona" style="margin-top: 1.25rem; font-size: 1.2rem;"></div>
+    <section class="validacaoDemanda">
+        <h2>Validação de Demanda</h2>
+        <div class="validacao">
+            <label for="totalPassageiros">Passageiros Solicitados:</label>
+            <input type="number" id="totalPassageiros" min="1" placeholder="Número de passageiros">
+            <button id="validarDemanda">Validar Demanda</button>
+        </div>
     </section>
+
+    <section class="resultadoDemanda">
+        <h2>Resultado</h2>
+        <p id="resultado"></p>
+    </section>
+    
 
     <script src="script.js"></script>
 </body>
