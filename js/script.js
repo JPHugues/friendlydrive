@@ -11,7 +11,9 @@ function calcularDistanciaSimulada(origem, destino) {
         "Guarulhos-Campinas": 95,
     };
     const chave = `${origem}-${destino}`;
-    return distanciasSimuladas[chave] || Math.floor(Math.random() * 120) + 10;
+    const chaveReversa = `${destino}-${origem}`;
+    
+    return distanciasSimuladas[chave] || distanciasSimuladas[chaveReversa] || 50;
 }
 
 function encontrarMotorista(origem, destino) {
@@ -48,16 +50,18 @@ function solicitarCarona() {
         return;
     }
 
+    const distancia = calcularDistanciaSimulada(origem, destino);
     resultadoDiv.innerHTML = `
         <p>Carona solicitada com sucesso!</p>
         <p><strong>Motorista:</strong> ${motorista.nome}</p>
         <p><strong>Localização:</strong> ${motorista.localizacao}</p>
-        <p><strong>Distância estimada:</strong> ${calcularDistanciaSimulada(origem, destino)} km</p>
+        <p><strong>Distância estimada:</strong> ${distancia} km</p>
     `;
     resultadoDiv.style.color = "green";
 
     document.querySelector("#enderecoOrigem").value = "";
     document.querySelector("#enderecoDestino").value = "";
 }
+
 
 document.querySelector("#solicitarCarona").addEventListener("click", solicitarCarona);
