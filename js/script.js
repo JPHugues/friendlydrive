@@ -21,4 +21,4 @@ document.addEventListener("DOMContentLoaded", () => {
         const mensagem = validarDemandaPassageiros(capacidadeTotal, totalPassageiros);
         campoResultado.textContent = mensagem;
     });
-})
+});

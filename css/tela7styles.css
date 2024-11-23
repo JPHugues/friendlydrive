@@ -111,3 +111,60 @@ a {
         font-size: 0.8rem;
     }
 }
+
+.validacaoDemanda {
+    margin: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.validacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.validacao label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.validacao input {
+    width: 80%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 0.1rem solid #000;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.validacao button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.validacao button:hover {
+    background-color: #0056b3;
+}
+
+
+.resultadoDemanda {
+    margin: 1.8rem;
+    text-align: center;
+}
+
+.resultadoDemanda p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff; 
+    margin-top: 1rem;
+}
